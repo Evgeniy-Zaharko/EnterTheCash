@@ -1,0 +1,29 @@
+﻿<Window x:Class="Cryptomat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cryptomat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        WindowState="Maximized"
+>
+        <!--WindowStyle="None"-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame x:Name="MainFrame" Grid.ColumnSpan="3" Grid.RowSpan="3"
+               Content="Frame" NavigationUIVisibility="Hidden"/>
+        <TextBlock x:Name="MyTb" Grid.Row="2"
+                   Text=""></TextBlock>
+    </Grid>
+    
+</Window>

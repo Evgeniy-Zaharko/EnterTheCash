@@ -1,0 +1,35 @@
+﻿<Page x:Class="Cryptomat.Pages.Success"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cryptomat.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Success">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <StackPanel>
+                <TextBlock Name="SuccessTb" Text="Операция успешно завершена"></TextBlock>
+                <TextBlock Name="AskCheckTb" Text="Печатать чек?"></TextBlock>
+
+                <Button Name="PrintYesBt" Content="Да" Click="PrintYesBt_Click" Margin="0,20,0,0"></Button>
+                <Button Name="PrintNoBt" Content="Нет" Click="PrintNoBt_Click"></Button>
+
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Page>

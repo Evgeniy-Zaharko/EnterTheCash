@@ -1,0 +1,31 @@
+﻿<Page x:Class="Cryptomat.ErrorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cryptomat"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Error">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>   
+        
+        <Image Source="../Images/error.jpeg" Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill"></Image>
+
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <TextBlock Name="ErrorTb" Foreground="White" 
+              FontSize="10" Text="Error" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </Viewbox>    
+    </Grid>
+</Page>

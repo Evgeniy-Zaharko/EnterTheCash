@@ -1,0 +1,10 @@
+{
+	"CameraId" : 1,
+	"Commission" : 0.02,
+	"CashPortName" : "port",
+	"CashBaudRate" : 9600,
+	"FullScreen" : false,
+	"CashCodeRequired" : false,
+	"WalletRequired" : true,
+	"UsePrinter" : false,
+}

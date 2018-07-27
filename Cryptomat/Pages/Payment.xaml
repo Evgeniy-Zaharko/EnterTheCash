@@ -1,0 +1,67 @@
+﻿<Page x:Class="Cryptomat.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cryptomat"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PaymentManager">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="5" Background="#303030" Height="30"
+                Grid.Column="3" Grid.Row="0">
+            <TextBlock Name="BalanceTb" Foreground="#AAAAAA"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Text="0 р." FontSize="16"></TextBlock>
+        </Border>
+
+        <Viewbox Grid.Column="3" Grid.Row="1">
+            <StackPanel>
+                <Button Name="Add5RubBt" Click="Add5RubBt_Click" Visibility="Hidden"
+                        Content="+5 BYN" IsEnabled="False"></Button>
+                <Button Name="Add10RubBt" Click="Add10RubBt_Click" Visibility="Hidden"
+                        Content="+10 BYN" IsEnabled="False"></Button>
+            </StackPanel>
+        </Viewbox>
+        
+
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <StackPanel>
+                <TextBlock Name="WalletTb"></TextBlock>
+                <TextBlock Name="ToPayTb"></TextBlock>
+                <TextBlock Name="CommissionTb"></TextBlock>
+                <TextBlock Name="FinalTb"></TextBlock>
+                <Button Name="PayBt" Content="Оплатить" Click="PayBt_OnClick"
+                        IsEnabled="False" Margin="0,20,0,0"></Button>
+            </StackPanel>
+        </Viewbox>
+        
+         <Viewbox Grid.Column="0" Grid.Row="2">
+            <StackPanel>
+                <TextBlock Name="BynToUsdTb"></TextBlock>
+                <TextBlock Name="UsdToBtcTb" Text="Loading cources..."></TextBlock>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="0" Grid.Row="0">
+            <Button Name="BackBt"  Content="Назад" Margin="0,15,30,65" Click="BackBt_Click"></Button>
+        </Viewbox>
+        
+    </Grid>
+</Page>
